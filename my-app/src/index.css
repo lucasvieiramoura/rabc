@@ -5,9 +5,84 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+
+  height: 100%;
+		background-color: #ff7e3b;
+		background-repeat: repeat,			no-repeat,			no-repeat;
+		background-attachment: fixed,			fixed,				fixed;
+		background-image: url("./Components/imagens/lafaete.jpg"), -moz-linear-gradient(60deg,#ff7e3b 5%, #ff7e3b);
+		background-image: url("./Components/imagens/lafaete.jpg"),  -webkit-linear-gradient(60deg, #ff7e3b, 0.5) 5%, rgba(0, 228, 255, 0.35);
+		background-image: url("./Components/imagens/lafaete.jpg"), -ms-linear-gradient(60deg,#ff7e3b 5%, rgba(0, 228, 255, 0.35));
+		background-image: url("./Components/imagens/lafaete.jpg"), linear-gradient(60deg,#ff7e3b 5%, rgba(0, 228, 255, 0.35));
+		opacity: 99%;
+	}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Wrapper */
+
+#wrapper {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  position: relative;
+  min-height: 100%;
+  padding: 1.5em;
+  z-index: 2;
+}
+
+  #wrapper > * {
+    z-index: 1;
+  }
+
+  #wrapper:before {
+    content: '';
+    display: block;
+  }
+
+  @media screen and (max-width: 360px) {
+
+    #wrapper {
+      padding: 0.75em;
+    }
+
+  }
+
+  body.is-ie #wrapper {
+    height: 100%;
+  }
+
+  .logo {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	background: rgba(182, 182, 182, 0.445);
+	height: 56px;
+  }
+
+  .logo a {
+	  color: white;
+	  text-decoration: none;
+	  font-size: 1.5rem;
+  }

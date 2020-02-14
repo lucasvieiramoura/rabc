@@ -10,6 +10,8 @@ router.get('/user/userId', userController.allowIfLoggedin, userController.getUse
 
 router.get('/profile',  userController.grantAccess('readAny', 'profile'), userController.getProfile);
 
+router.get('/home', userController.allowIfLoggedin, userController.grantAccess('readAny', 'profile'),)
+
 router.get('/users', userController.allowIfLoggedin, userController.grantAccess('readAny', 'profile'), userController.getUsers);
 
 router.put('/user/:userId', userController.allowIfLoggedin, userController.grantAccess('updateAny', 'profile'), userController.updateUser);
