@@ -1,9 +1,5 @@
 .env
 node_modules/*
-package.json
-package-lock.json
 server/server.js
 server/db.js
 my-app/node_modules
-my-app/package.json
-my-app/package-lock.json
